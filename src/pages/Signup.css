@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-orange: #c88410;
+  --text-dark: #333;
+}
+
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdfdfd;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.signup-card {
+  display: flex;
+  width: 950px; /* Thoda width kam kiya */
+  height: 650px; /* Fixed height for better alignment with image */
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.highlight-dark span {
+  background-color: #a66d0d;
+  font-weight: 600;
+}
+.signup-left {
+  width: 50%; 
+  z-index: 1; 
+  position: relative;
+  overflow: hidden; /* Image bahar na dikhe */
+  background: #fff;
+}
+
+.signup-left img {
+  position: absolute; 
+  left: 20px; 
+  width: 200%; 
+  height: auto;
+  object-fit: contain;
+  opacity: 0.8; 
+  top: 70%;
+  transform: translateY(-70%); 
+  pointer-events: none;
+}
+
+
+.signup-right {
+  width: 50%;
+  padding: 40px 50px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background: white;
+  z-index: 2;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  top: 7px;
+  position: absolute;
+  margin-left: -230px
+}
+
+.mini-logo { width: 30px; }
+.brand-name { font-size: 1.1rem; font-weight: 600; }
+
+.main-title {
+  font-size: 1.8rem; 
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; 
+  margin-bottom: 10px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #000;
+  border-radius: 15px; 
+  padding: 8px 15px; 
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.input-box .icon img { width: 18px; height: 18px; }
+
+/* Button */
+.create-btn {
+  width: 100%;
+  background-color: var(--primary-orange);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.create-btn:hover {
+  background-color: #a66d0d;
+}
+
+/* Divider & Socials */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.line { flex: 1; height: 1px; background: #ddd; }
+.divider p { margin: 0 10px; color: #888; font-size: 0.8rem; }
+
+.social-login-group {
+  display: flex;
+  gap: 10px;
+}
+.login-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+}
+.login-text span {
+ color: var(--primary-orange);
+  cursor: pointer;
+  font-weight: bold;
+}  
+
+.social-btn {
+  gap: 10px;
+  width: 160px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  background: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.social-btn:hover {
+   background: #f5f5f5;
+  transform: translateY(-2px);
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .signup-card { width: 400px; height: auto; flex-direction: column; }
+  .signup-left { display: none; }
+  .signup-right { width: 100%; padding: 30px 20px; }
+}
